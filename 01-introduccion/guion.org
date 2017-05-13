@@ -15,7 +15,7 @@ sudo pacman -S ghc
 
 - macOS
  - Instalación con homebrew
-#+END_SRC bash
+#+BEGIN_SRC bash
 brew install ghc
 #+END_SRC
 
