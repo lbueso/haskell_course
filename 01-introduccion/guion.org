@@ -1,6 +1,6 @@
 * Introducción a Haskell
 ** Introducción
-*** Instalación
+*** DONE Instalación
     
 - Debian/Ubuntu
 #+BEGIN_SRC bash
@@ -27,7 +27,7 @@ brew install ghc
 *** TODO Introducción histórica
 *** TODO ¿Qué es Haskell?
 ** TODO Primeros pasos
-*** TODO GHCI
+*** TODO GHCi
     - Así abrimos el intérprete de Haskell:
     #+BEGIN_SRC bash
 $ ghci
@@ -65,9 +65,26 @@ Prelude> :t 2
 2 :: Num t => t
 Prelude> :t "hola"
 "hola" :: [Char]
+
+Prelude> :l introduccion.hs
+[1 of 1] Compiling Main             ( introduccion.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> 
     #+END_SRC      
 
+**** TODO Ejercicios:
+
 *** TODO Primeras Funciones
+    #+BEGIN_SRC haskell
+doubleMe x = x + x
+
+doubleUs x y = 2*x + 2*y
+    #+END_SRC
+
+**** Ejercicio
+     - Crea un fichero, escribe las funciones /doubleMe/ y /doubleUs/,
+       a continuación prueba su funcionamiento en el GHCi
+
 *** TODO Listas
 *** TODO Tuplas
 ** TODO Sintaxis en funciones
