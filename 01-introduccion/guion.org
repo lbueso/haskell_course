@@ -17,7 +17,7 @@ sudo pacman -S ghc
  - Instalación desde la página web https://www.haskell.org/platform/mac.html
    
  - Instalación con homebrew
-   #+BEGIN_SRC bash
+   #+BEGIN_SRC haskell-interactive
 brew install ghc
    #+END_SRC
    
@@ -27,29 +27,29 @@ brew install ghc
 *** TODO Introducción histórica
 *** TODO ¿Qué es Haskell?
 ** TODO Primeros pasos
-*** TODO GHCi
+*** DONE GHCi
     - Así abrimos el intérprete de Haskell:
-    #+BEGIN_SRC bash
+    #+BEGIN_SRC haskell-interactive
 $ ghci
 GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
 Prelude>
     #+END_SRC
     - Podemos escribir expresiones aritméticas y lógicas:
-    #+BEGIN_SRC bash
+    #+BEGIN_SRC haskell-interactive
 Prelude> 2 + 2
 4
 Prelude> True && False
 False
     #+END_SRC
     - Podemos llamar a funciones:
-    #+BEGIN_SRC bash
+    #+BEGIN_SRC haskell-interactive
 Prelude> succ 7
 8
 Prelude> min 100 20
 20
     #+END_SRC
     - Errores:
-    #+BEGIN_SRC bash
+    #+BEGIN_SRC haskell-interactive
 Prelude> 2 + "hola"
 
 <interactive>:6:1: error:
@@ -58,7 +58,7 @@ Prelude> 2 + "hola"
       In an equation for ‘it’: it = 2 + "hola"
     #+END_SRC
     - Expresiones útiles:
-    #+BEGIN_SRC bash
+    #+BEGIN_SRC haskell-interactive
 Prelude> :t 5
 5 :: Num t => t
 Prelude> :t 2
@@ -71,10 +71,10 @@ Prelude> :l introduccion.hs
 Ok, modules loaded: Main.
 *Main> 
     #+END_SRC      
+**** Ejercicio:
+     - Abre el GHCi y comprueba su funcionamiento.
 
-**** TODO Ejercicios:
-
-*** TODO Primeras Funciones
+*** DONE Primeras Funciones
     #+BEGIN_SRC haskell
 doubleMe x = x + x
 
@@ -85,7 +85,53 @@ doubleUs x y = 2*x + 2*y
      - Crea un fichero, escribe las funciones /doubleMe/ y /doubleUs/,
        a continuación prueba su funcionamiento en el GHCi
 
-*** TODO Listas
+*** DONE Listas
+    - Creando listas en el GHCi:
+    #+BEGIN_SRC haskell-interactive
+Prelude> let list = [1,2,3,4,5]
+Prelude> let list' = [1..5]
+Prelude> list == list'
+list == list'
+True
+Prelude> 
+    #+END_SRC
+
+    - Creando listas en un fichero ~.hs~:
+    #+BEGIN_SRC haskell
+list = [1,2,3,4,5]
+
+list' = [1..5]
+    #+END_SRC
+
+    - Las listas pueden concatenarse con el operador ~++~ y construirse con el operador ~:~:
+    #+BEGIN_SRC haskell-interactive
+Prelude> [1..9] ++ [10..19]
+[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+Prelude> "hola " ++ "mundo!"
+"hola mundo!"
+Prelude> 1:[2..5]
+1:[2..5]
+[1,2,3,4,5]
+Prelude> 'h':"ola"
+"hola"
+Prelude> 1:[]
+[1]
+    #+END_SRC
+
+    - Las operaciones básicas en las listas son:
+      - ~head~
+    #+BEGIN_SRC haskell-interactive
+Prelude> head [1..10]
+1
+Prelude> 
+    #+END_SRC
+      - ~tail~
+    #+BEGIN_SRC haskell-interactive
+Prelude> tail [1..10]
+[2,3,4,5,6,7,8,9,10]
+Prelude> 
+    #+END_SRC
+
 *** TODO Tuplas
 ** TODO Sintaxis en funciones
 *** TODO /Pattern matching/
