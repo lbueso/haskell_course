@@ -1,7 +1,7 @@
 * Introducción a Haskell
 ** Introducción
 *** Instalación
-
+    
 - Debian/Ubuntu
 #+BEGIN_SRC bash
 sudo apt-get update
@@ -15,19 +15,58 @@ sudo pacman -S ghc
 
 - macOS
  - Instalación desde la página web https://www.haskell.org/platform/mac.html
-
+   
  - Instalación con homebrew
-#+BEGIN_SRC bash
+   #+BEGIN_SRC bash
 brew install ghc
-#+END_SRC
-
+   #+END_SRC
+   
 - Windows
   https://www.haskell.org/platform/windows.html
-
+  
 *** TODO Introducción histórica
 *** TODO ¿Qué es Haskell?
 ** TODO Primeros pasos
 *** TODO GHCI
+    - Así abrimos el intérprete de Haskell:
+    #+BEGIN_SRC bash
+$ ghci
+GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
+Prelude>
+    #+END_SRC
+    - Podemos escribir expresiones aritméticas y lógicas:
+    #+BEGIN_SRC bash
+Prelude> 2 + 2
+4
+Prelude> True && False
+False
+    #+END_SRC
+    - Podemos llamar a funciones:
+    #+BEGIN_SRC bash
+Prelude> succ 7
+8
+Prelude> min 100 20
+20
+    #+END_SRC
+    - Errores:
+    #+BEGIN_SRC bash
+Prelude> 2 + "hola"
+
+<interactive>:6:1: error:
+    • No instance for (Num [Char]) arising from a use of ‘+’
+    • In the expression: 2 + "hola"
+      In an equation for ‘it’: it = 2 + "hola"
+    #+END_SRC
+    - Expresiones útiles:
+    #+BEGIN_SRC bash
+Prelude> :t 5
+5 :: Num t => t
+Prelude> :t 2
+2 :: Num t => t
+Prelude> :t "hola"
+"hola" :: [Char]
+    #+END_SRC      
+
 *** TODO Primeras Funciones
 *** TODO Listas
 *** TODO Tuplas
