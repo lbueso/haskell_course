@@ -11,6 +11,7 @@ sudo apt-get install ghc
 - Arch
 #+BEGIN_SRC bash
 sudo pacman -S ghc
+#+END_SRC
 
 - macOS
  - Instalación con homebrew
@@ -19,10 +20,10 @@ brew install ghc
 #+END_SRC
 
  - instalación desde la página web
-   ~https://www.haskell.org/platform/mac.html~
+   https://www.haskell.org/platform/mac.html
 
 - Windows
-  ~https://www.haskell.org/platform/windows.html~
+  https://www.haskell.org/platform/windows.html
 
 *** TODO Introducción histórica
 *** TODO ¿Qué es Haskell?
