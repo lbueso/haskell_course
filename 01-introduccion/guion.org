@@ -1,0 +1,38 @@
+* Introducción a Haskell
+** Introducción
+*** Instalación
+
+- Debian/Ubuntu
+#+BEGIN_SRC bash
+sudo apt-get update
+sudo apt-get install ghc
+#+END_SRC
+
+- Arch
+#+BEGIN_SRC bash
+sudo pacman -S ghc
+
+- macOS
+ - Instalación con homebrew
+#+END_SRC bash
+brew install ghc
+#+END_SRC
+
+ - instalación desde la página web
+   ~https://www.haskell.org/platform/mac.html~
+
+- Windows
+  ~https://www.haskell.org/platform/windows.html~
+
+*** TODO Introducción histórica
+*** TODO ¿Qué es Haskell?
+** TODO Primeros pasos
+*** TODO GHCI
+*** TODO Primeras Funciones
+*** TODO Listas
+*** TODO Tuplas
+** TODO Sintaxis en funciones
+*** TODO /Pattern matching/
+*** TODO /Guards/
+*** TODO /where/, /let/ y /case/
+** TODO Recursión
