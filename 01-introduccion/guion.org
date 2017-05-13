@@ -14,13 +14,12 @@ sudo pacman -S ghc
 #+END_SRC
 
 - macOS
+ - Instalación desde la página web https://www.haskell.org/platform/mac.html
+
  - Instalación con homebrew
 #+BEGIN_SRC bash
 brew install ghc
 #+END_SRC
-
- - instalación desde la página web
-   https://www.haskell.org/platform/mac.html
 
 - Windows
   https://www.haskell.org/platform/windows.html
