@@ -6,6 +6,7 @@
 \usepackage[scale=2]{ccicons}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{minted}
 
 % TODO:
 % position adjustement
@@ -16,39 +17,38 @@
 
 \setwatermark{\includegraphics[height=8cm]{img/Haskell-Logo.png}}
 
-
 \title{Introducción a Haskell}
 \subtitle{}
 \date{\today}
-\author{Ignacio Ballesteros,\\Luis Eduardo Bueso,\\Anabel Ovide}
+\author{Ballesteros, Ignacio\\Bueso, Luis Eduardo\\Ovide Anabel}
 \institute{\url{https://github.com/edububa/haskell_course}}
 
 \begin{document}
 
 \maketitle
 
-\begin{frame}{Introducción}
+\begin{frame}{Introducción}[fragile]
   \framesubtitle{Instalación}
 
   \texttt{Con gestores de paquetes}
 
   \begin{block}{Debian/Ubuntu}
-% \begin{verbatim}
-    sudo apt-get update\\
-    sudo apt-get install ghc
-% \end{verbatim}
+    \begin{minted}{shell}
+      sudo apt-get update\\
+      sudo apt-get install ghc
+    \end{minted}
   \end{block}
 
   \begin{block}{Arch}
-% \begin{verbatim}
-    sudo pacman -S ghc
-% \end{verbatim}
+    \begin{minted}{shell}
+      sudo pacman -S ghc
+    \end{minted}
   \end{block}
 
   \begin{block}{macOS}
-% \begin{verbatim}
-    brew install ghc
-% \end{verbatim}
+    \begin{minted}{bash}
+      brew install ghc
+    \end{minted}
   \end{block}
 
   \texttt{Desde la web}\\
@@ -68,36 +68,89 @@
 
 \end{frame}
 
-\begin{frame}{Primeros pasos}      %TODO
-  \framesubtitle{GHCi}
+% \begin{frame}{Primeros pasos}      %TODO
+%   \framesubtitle{GHCi}
 
-\end{frame}
+%   \texttt{Así abrimos el intérprete de Haskell}
+%   \begin{block}
+%     \begin{minted}{bash}
+%       \$ ghci
+%       GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
+%       Prelude>
+%     \end{minted}
+%   \end{block}
 
-\begin{frame}{Primeros pasos}      %TODO
-  \framesubtitle{Primeras funciones}
+%   \begin{block}{Podemos escribir expresiones aritméticas y lógicas:}
+%     \begin{minted}{bash}
+%       Prelude> 2 + 2
+%       4
+%       Prelude> True && False
+%       False
+%     \end{minted}
+%   \end{block}
 
-\end{frame}
+%   \begin{block}{Podemos llamar a funciones}
+%     \begin{minted}{bash}
+%       Prelude> 2 + 2
+%       4
+%       Prelude> True && False
+%       False
+%     \end{minted}
+%   \end{block}
 
-\begin{frame}{Primeros pasos}      %TODO
-  \framesubtitle{Listas}
+%   \begin{block}{Errores}
+%     \begin{minted}{bash}
+%       Prelude> 2 + "hola"
 
-\end{frame}
+%       <interactive>:6:1: error:
+%       • No instance for (Num [Char]) arising from a use of ‘+’
+%       • In the expression: 2 + "hola"
+%       In an equation for ‘it’: it = 2 + "hola"
+%     \end{minted}
+%   \end{block}
 
-\begin{frame}{Primeros pasos}      %TODO
-  \framesubtitle{Tuplas}
+%   \begin{block}{Expresiones útiles}
+%     \begin{minted}{bash}
+%       Prelude> :t 5
+%       5 :: Num t => t
+%       Prelude> :t 2
+%       2 :: Num t => t
+%       Prelude> :t "hola"
+%       "hola" :: [Char]
 
-\end{frame}
+%       Prelude> :l introduccion.hs
+%       [1 of 1] Compiling Main             ( introduccion.hs, interpreted )
+%       Ok, modules loaded: Main.
+%       *Main>
+%     \end{minted}
+%   \end{block}
+% \end{frame}
 
-\begin{frame}{Tipos y \emph{Typeclasses}}      %TODO
+% \begin{frame}{Primeros pasos}      %TODO
+%   \framesubtitle{Primeras funciones}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{Sintaxis en funciones}      %TODO
+% \begin{frame}{Primeros pasos}      %TODO
+%   \framesubtitle{Listas}
 
-\end{frame}
+% \end{frame}
 
-\begin{frame}{Recursión}      %TODO
+% \begin{frame}{Primeros pasos}      %TODO
+%   \framesubtitle{Tuplas}
 
-\end{frame}
+% \end{frame}
+
+% \begin{frame}{Tipos y \emph{Typeclasses}}      %TODO
+
+% \end{frame}
+
+% \begin{frame}{Sintaxis en funciones}      %TODO
+
+% \end{frame}
+
+% \begin{frame}{Recursión}      %TODO
+
+% \end{frame}
 
 \end{document}
