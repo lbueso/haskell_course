@@ -133,8 +133,12 @@ Prelude>
     #+END_SRC
 
 *** TODO Tuplas
+** TODO Tipos y /Typeclasses/
 ** TODO Sintaxis en funciones
 *** TODO /Pattern matching/
 *** TODO /Guards/
 *** TODO /where/, /let/ y /case/
 ** TODO Recursión
+
+
+
