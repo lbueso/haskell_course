@@ -27,20 +27,25 @@
 
 \maketitle
 
-\begin{frame}{Introducción}[fragile]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% INTRODUCCION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{frame}[fragile]
+  \frametitle{Introducción}
   \framesubtitle{Instalación}
 
   \texttt{Con gestores de paquetes}
 
   \begin{block}{Debian/Ubuntu}
-    \begin{minted}{shell}
-      sudo apt-get update\\
+    \begin{minted}{bash}
+      sudo apt-get update
       sudo apt-get install ghc
     \end{minted}
   \end{block}
 
   \begin{block}{Arch}
-    \begin{minted}{shell}
+    \begin{minted}{bash}
       sudo pacman -S ghc
     \end{minted}
   \end{block}
@@ -58,7 +63,8 @@
 
 \end{frame}
 
-\begin{frame}{Introducción}     %TODO
+\begin{frame}[fragile]          %TODO
+  \frametitle{Introducción}
   \framesubtitle{Introducción Histórica}
 
 \end{frame}
@@ -68,89 +74,120 @@
 
 \end{frame}
 
-% \begin{frame}{Primeros pasos}      %TODO
-%   \framesubtitle{GHCi}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% PRIMEROS PASOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-%   \texttt{Así abrimos el intérprete de Haskell}
-%   \begin{block}
-%     \begin{minted}{bash}
-%       \$ ghci
-%       GHCi, version 8.0.2: http://www.haskell.org/ghc/  :? for help
-%       Prelude>
-%     \end{minted}
-%   \end{block}
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
+  \framesubtitle{GHCi}
 
-%   \begin{block}{Podemos escribir expresiones aritméticas y lógicas:}
-%     \begin{minted}{bash}
-%       Prelude> 2 + 2
-%       4
-%       Prelude> True && False
-%       False
-%     \end{minted}
-%   \end{block}
+  \begin{block}{Así abrimos el intérprete de Haskell}
+    \begin{minted}{bash}
+      \$ ghci
+      GHCi, version 8.0.2: http://www.haskell.org/ghc/
+       :? for help
+      Prelude>
+    \end{minted}
+  \end{block}
 
-%   \begin{block}{Podemos llamar a funciones}
-%     \begin{minted}{bash}
-%       Prelude> 2 + 2
-%       4
-%       Prelude> True && False
-%       False
-%     \end{minted}
-%   \end{block}
+  \begin{block}{Podemos escribir expresiones aritméticas y lógicas:}
+    \begin{minted}{bash}
+      Prelude> 2 + 2
+      4
+      Prelude> True && False
+      False
+    \end{minted}
+  \end{block}
 
-%   \begin{block}{Errores}
-%     \begin{minted}{bash}
-%       Prelude> 2 + "hola"
+  
+\end{frame}
 
-%       <interactive>:6:1: error:
-%       • No instance for (Num [Char]) arising from a use of ‘+’
-%       • In the expression: 2 + "hola"
-%       In an equation for ‘it’: it = 2 + "hola"
-%     \end{minted}
-%   \end{block}
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
+  \framesubtitle{GHCi}
 
-%   \begin{block}{Expresiones útiles}
-%     \begin{minted}{bash}
-%       Prelude> :t 5
-%       5 :: Num t => t
-%       Prelude> :t 2
-%       2 :: Num t => t
-%       Prelude> :t "hola"
-%       "hola" :: [Char]
+  \begin{block}{Podemos llamar a funciones}
+    \begin{minted}{bash}
+      Prelude> 2 + 2
+      4
+      Prelude> True && False
+      False
+    \end{minted}
+  \end{block}
 
-%       Prelude> :l introduccion.hs
-%       [1 of 1] Compiling Main             ( introduccion.hs, interpreted )
-%       Ok, modules loaded: Main.
-%       *Main>
-%     \end{minted}
-%   \end{block}
-% \end{frame}
+  \begin{block}{Errores}
+    \begin{minted}{bash}
+      Prelude> 2 + "hola"
 
-% \begin{frame}{Primeros pasos}      %TODO
-%   \framesubtitle{Primeras funciones}
+      <interactive>:6:1: error:
+      • No instance for (Num [Char]) arising from a use
+        of ‘+’
+      • In the expression: 2 + "hola"
+      In an equation for ‘it’: it = 2 + "hola"
+    \end{minted}
+  \end{block}
+\end{frame}
 
-% \end{frame}
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
+  \framesubtitle{GHCi}
+  \begin{block}{Expresiones útiles}
+    \begin{minted}{bash}
+      Prelude> :t 5
+      5 :: Num t => t
+      Prelude> :t 2
+      2 :: Num t => t
+      Prelude> :t "hola"
+      "hola" :: [Char]
 
-% \begin{frame}{Primeros pasos}      %TODO
-%   \framesubtitle{Listas}
+      Prelude> :l introduccion.hs
+      [1 of 1] Compiling Main
+         ( introduccion.hs, interpreted )
+      Ok, modules loaded: Main.
+      *Main>
+    \end{minted}
+  \end{block}
+\end{frame}
 
-% \end{frame}
 
-% \begin{frame}{Primeros pasos}      %TODO
-%   \framesubtitle{Tuplas}
+\begin{frame}{Primeros pasos}      %TODO
+  \framesubtitle{Primeras funciones}
 
-% \end{frame}
+\end{frame}
 
-% \begin{frame}{Tipos y \emph{Typeclasses}}      %TODO
+\begin{frame}{Primeros pasos}      %TODO
+  \framesubtitle{Listas}
 
-% \end{frame}
+\end{frame}
 
-% \begin{frame}{Sintaxis en funciones}      %TODO
+\begin{frame}{Primeros pasos}      %TODO
+  \framesubtitle{Tuplas}
 
-% \end{frame}
+\end{frame}
 
-% \begin{frame}{Recursión}      %TODO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% TIPOS Y TYPECLASSES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
-% \end{frame}
+\begin{frame}{Tipos y \emph{Typeclasses}}      %TODO
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% SINTAXIS EN FUNCIONES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{frame}{Sintaxis en funciones}      %TODO
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% RECURSION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{frame}{Recursión}      %TODO
+
+\end{frame}
 
 \end{document}
