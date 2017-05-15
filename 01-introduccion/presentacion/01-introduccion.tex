@@ -21,13 +21,13 @@
 
 \title{Introducción a Haskell}
 \subtitle{}
-\date{\today}
-\author{Ballesteros, Ignacio\\Bueso, Luis Eduardo\\Ovide, Anabel}
+\date{17 de mayo de 2017}
+\author{Anabel Ovide\\Ignacio Ballesteros\\Luis Eduardo Bueso\\Santiago Cervantes}
 \institute{\url{https://github.com/edububa/haskell_course}}
 
 \titlegraphic{
-  \includegraphics[width=2cm]{img/logo_acm_cromo.png}% \hspace*{2cm}~%
-  % \includegraphics[width=2cm]{img/logo_acm_cromo.png}\hspace{2cm}~%
+  \includegraphics[width=2cm]{img/fiwhiteblack.png}\hspace*{4cm}~%
+  \includegraphics[width=2cm]{img/logo_acm_cromo.png}% \hspace{2cm}~%
   % \includegraphics[width=2cm]{img/logo_acm_cromo.png}
 }
 
@@ -159,21 +159,122 @@
 \end{frame}
 
 \subsection{Primeras funciones}
-\begin{frame}{Primeros pasos}      %TODO
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
   \framesubtitle{Primeras funciones}
+  \begin{block}{Función:}
 
+  \end{block}
+  \texttt{Ejemplos:}
+  \begin{minted}[bgcolor=bg]{haskell}
+    doubleMe x = x + x
+
+    doubleUs x y = doubleMe x + doubleMe y
+
+    doubleSmallNumber x = (if x > 100 then x else x*2) + 1
+  \end{minted}
 \end{frame}
 
 \subsection{Listas}
-\begin{frame}{Primeros pasos}      %TODO
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
   \framesubtitle{Listas}
+  \begin{block}{Listas:}
+  \end{block}
+  \texttt{Creando listas en un fichero \verb~.hs~:}
+  \begin{minted}[bgcolor=bg]{haskell}
+    list = [1,2,3,4,5]
+    list' = [1..5]
+  \end{minted}
+  \texttt{Ejemplos de listas en el GHCi}
+  \begin{minted}[bgcolor=bg]{shell}
+    Prelude> let list = [1,2,3,4,5]
+    Prelude> let list1 = [1..5]
+    Prelude> list == list1
+    list == list1
+    True
+    Prelude>
+  \end{minted}
+\end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
+  \framesubtitle{Listas}
+  \begin{block}{Listas:}
+  \end{block}
+  Las listas pueden concatenarse con el operador \verb~++~ y\\construirse con el operador \verb~:~
+  \begin{minted}[bgcolor=bg]{shell}
+    Prelude> [1..9] ++ [10..19]
+    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
+    Prelude> "hello " ++ "world!"
+    "hello world!"
+    Prelude> 1:[2..5]
+    1:[2..5]
+    [1,2,3,4,5]
+    Prelude> 'h':"ello"
+    "hello"
+    Prelude> 1:[]
+    [1]
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
+  \framesubtitle{Listas}
+  \texttt{Las operaciones básicas en las listas son:}
+  \begin{itemize}
+  \item \verb~head~:
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> head [1..10]
+      1
+    \end{minted}
+  \item \verb~tail~:
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> tail [1..10]
+      [2,3,4,5,6,7,8,9,10]
+    \end{minted}
+  \item \verb~last~:
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> last [1..10]
+      10
+    \end{minted}
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
+  \framesubtitle{Listas}
+  \begin{itemize}
+  \item \verb~init~:
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> init [1..10]
+      [1,2,3,4,5,6,7,8,9]
+    \end{minted}
+  \item \verb~length~:
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> length [1..10]
+      10
+    \end{minted}
+  \item \verb~reverse~:
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> reverse [1..10]
+      [10,9,8,7,6,5,4,3,2,1]
+    \end{minted}
+  \item \verb~take~:
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> take 4 [1..10]
+      [1,2,3,4]
+    \end{minted}
+  \end{itemize}
 \end{frame}
 
 \subsection{Tuplas}
-\begin{frame}{Primeros pasos}      %TODO
+\begin{frame}[fragile]
+  \frametitle{Primeros pasos}
   \framesubtitle{Tuplas}
-
+  \begin{block}{Tuplas:}
+  \end{block}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
