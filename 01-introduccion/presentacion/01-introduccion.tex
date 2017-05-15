@@ -8,6 +8,8 @@
 \usepackage[spanish]{babel}
 \usepackage{minted}
 
+\usemintedstyle{emacs}
+
 % TODO:
 % position adjustement
 % change colours
@@ -29,6 +31,8 @@
 
 \frame{\frametitle{Índice}\tableofcontents}
 
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % INTRODUCCION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -39,29 +43,20 @@
   \framesubtitle{Instalación}
   \begin{itemize}
   \item\texttt{Con gestores de paquetes}
-
-    % \begin{block}{Debian/Ubuntu}
     \begin{itemize}
     \item\texttt{Debian/Ubuntu}
-      \begin{minted}{bash}
+      \begin{minted}[bgcolor=bg]{shell}
         sudo apt-get update
         sudo apt-get install ghc
       \end{minted}
-      % \end{block}
-
-      % \begin{block}{Arch}
     \item\texttt{Arch}
-      \begin{minted}{bash}
+      \begin{minted}[bgcolor=bg]{shell}
         sudo pacman -S ghc
       \end{minted}
-      % \end{block}
-
-      % \begin{block}{macOS}
     \item\texttt{macOS}
-      \begin{minted}{bash}
+      \begin{minted}[bgcolor=bg]{shell}
         brew install ghc
       \end{minted}
-      % \end{block}
     \end{itemize}
   \item\texttt{Desde la web}\\
     https://www.haskell.org/platform/mac.html\\
@@ -92,27 +87,21 @@
   \frametitle{Primeros pasos}
   \framesubtitle{GHCi}
   \begin{itemize}
-    % \begin{block}{Así abrimos el intérprete de Haskell}
   \item\texttt{Así abrimos el intérprete de Haskell}
-    % \begin{minted}{bash}
-\begin{verbatim}
-      $ ghci
+    \begin{minted}[bgcolor=bg]{shell}
+      \$ ghci
       GHCi, version 8.0.2: http://www.haskell.org/ghc/
       :? for help
       Prelude>
-\end{verbatim}
-    % \end{minted}
-    % \end{block}
+    \end{minted}
 
-    % \begin{block}{Podemos escribir expresiones aritméticas y lógicas:}
   \item\texttt{Podemos escribir expresiones aritméticas y lógicas:}
-    \begin{minted}{bash}
+    \begin{minted}[bgcolor=bg]{shell}
       Prelude> 2 + 2
       4
       Prelude> True && False
       False
     \end{minted}
-    % \end{block}
   \end{itemize}
 \end{frame}
 
@@ -120,20 +109,16 @@
   \frametitle{Primeros pasos}
   \framesubtitle{GHCi}
   \begin{itemize}
-    % \begin{block}{Podemos llamar a funciones}
   \item\texttt{Podemos llamar a funciones}
-    \begin{minted}{bash}
+    \begin{minted}[bgcolor=bg]{bash}
       Prelude> 2 + 2
       4
       Prelude> True && False
       False
     \end{minted}
-    % \end{block}
-
-    % \begin{block}{Errores}
 
   \item\texttt{Errores}
-    \begin{minted}{bash}
+    \begin{minted}[bgcolor=bg]{shell}
       Prelude> 2 + "hola"
 
       <interactive>:6:1: error:
@@ -143,17 +128,14 @@
       In an equation for ‘it’: it = 2 + "hola"
     \end{minted}
   \end{itemize}
-  % \end{block}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{GHCi}
-  % \begin{block}{Expresiones útiles}
-  %   \texttt{Expresiones útiles}
   \begin{itemize}
   \item\texttt{Expresiones útiles:}
-    \begin{minted}{bash}
+    \begin{minted}[bgcolor=bg]{shell}
       Prelude> :t 5
       5 :: Num t => t
       Prelude> :t 2
@@ -168,7 +150,6 @@
       *Main>
     \end{minted}
   \end{itemize}
-  % \end{block}
 \end{frame}
 
 \subsection{Primeras funciones}
