@@ -20,55 +20,64 @@
 \title{Introducción a Haskell}
 \subtitle{}
 \date{\today}
-\author{Ballesteros, Ignacio\\Bueso, Luis Eduardo\\Ovide Anabel}
+\author{Ballesteros, Ignacio\\Bueso, Luis Eduardo\\Ovide, Anabel}
 \institute{\url{https://github.com/edububa/haskell_course}}
 
 \begin{document}
 
 \maketitle
 
+\frame{\frametitle{Índice}\tableofcontents}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % INTRODUCCION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
+\section{Introducción}
+\subsection{Instalación}
 \begin{frame}[fragile]
   \frametitle{Introducción}
   \framesubtitle{Instalación}
+  \begin{itemize}
+  \item\texttt{Con gestores de paquetes}
 
-  \texttt{Con gestores de paquetes}
+    % \begin{block}{Debian/Ubuntu}
+    \begin{itemize}
+    \item\texttt{Debian/Ubuntu}
+      \begin{minted}{bash}
+        sudo apt-get update
+        sudo apt-get install ghc
+      \end{minted}
+      % \end{block}
 
-  \begin{block}{Debian/Ubuntu}
-    \begin{minted}{bash}
-      sudo apt-get update
-      sudo apt-get install ghc
-    \end{minted}
-  \end{block}
+      % \begin{block}{Arch}
+    \item\texttt{Arch}
+      \begin{minted}{bash}
+        sudo pacman -S ghc
+      \end{minted}
+      % \end{block}
 
-  \begin{block}{Arch}
-    \begin{minted}{bash}
-      sudo pacman -S ghc
-    \end{minted}
-  \end{block}
-
-  \begin{block}{macOS}
-    \begin{minted}{bash}
-      brew install ghc
-    \end{minted}
-  \end{block}
-
-  \texttt{Desde la web}\\
-  https://www.haskell.org/platform/mac.html\\
-  https://www.haskell.org/platform/windows.html\\
-  https://www.haskell.org/downloads/linux
-
+      % \begin{block}{macOS}
+    \item\texttt{macOS}
+      \begin{minted}{bash}
+        brew install ghc
+      \end{minted}
+      % \end{block}
+    \end{itemize}
+  \item\texttt{Desde la web}\\
+    https://www.haskell.org/platform/mac.html\\
+    https://www.haskell.org/platform/windows.html\\
+    https://www.haskell.org/downloads/linux
+  \end{itemize}
 \end{frame}
 
+\subsection{Introducción Histórica}
 \begin{frame}[fragile]          %TODO
   \frametitle{Introducción}
   \framesubtitle{Introducción Histórica}
 
 \end{frame}
 
+\subsection{¿Qué es Haskell?}
 \begin{frame}{Intoducción}      %TODO
   \framesubtitle{¿Qué es Haskell?}
 
@@ -77,62 +86,73 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % PRIMEROS PASOS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
+\section{Primeros Pasos}
+\subsection{GHCi}
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{GHCi}
-
-  \begin{block}{Así abrimos el intérprete de Haskell}
-    \begin{minted}{bash}
-      \$ ghci
+  \begin{itemize}
+    % \begin{block}{Así abrimos el intérprete de Haskell}
+  \item\texttt{Así abrimos el intérprete de Haskell}
+    % \begin{minted}{bash}
+\begin{verbatim}
+      $ ghci
       GHCi, version 8.0.2: http://www.haskell.org/ghc/
-       :? for help
+      :? for help
       Prelude>
-    \end{minted}
-  \end{block}
+\end{verbatim}
+    % \end{minted}
+    % \end{block}
 
-  \begin{block}{Podemos escribir expresiones aritméticas y lógicas:}
+    % \begin{block}{Podemos escribir expresiones aritméticas y lógicas:}
+  \item\texttt{Podemos escribir expresiones aritméticas y lógicas:}
     \begin{minted}{bash}
       Prelude> 2 + 2
       4
       Prelude> True && False
       False
     \end{minted}
-  \end{block}
-
-  
+    % \end{block}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{GHCi}
-
-  \begin{block}{Podemos llamar a funciones}
+  \begin{itemize}
+    % \begin{block}{Podemos llamar a funciones}
+  \item\texttt{Podemos llamar a funciones}
     \begin{minted}{bash}
       Prelude> 2 + 2
       4
       Prelude> True && False
       False
     \end{minted}
-  \end{block}
+    % \end{block}
 
-  \begin{block}{Errores}
+    % \begin{block}{Errores}
+
+  \item\texttt{Errores}
     \begin{minted}{bash}
       Prelude> 2 + "hola"
 
       <interactive>:6:1: error:
       • No instance for (Num [Char]) arising from a use
-        of ‘+’
+      of ‘+’
       • In the expression: 2 + "hola"
       In an equation for ‘it’: it = 2 + "hola"
     \end{minted}
-  \end{block}
+  \end{itemize}
+  % \end{block}
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{GHCi}
-  \begin{block}{Expresiones útiles}
+  % \begin{block}{Expresiones útiles}
+  %   \texttt{Expresiones útiles}
+  \begin{itemize}
+  \item\texttt{Expresiones útiles:}
     \begin{minted}{bash}
       Prelude> :t 5
       5 :: Num t => t
@@ -143,24 +163,27 @@
 
       Prelude> :l introduccion.hs
       [1 of 1] Compiling Main
-         ( introduccion.hs, interpreted )
+      ( introduccion.hs, interpreted )
       Ok, modules loaded: Main.
       *Main>
     \end{minted}
-  \end{block}
+  \end{itemize}
+  % \end{block}
 \end{frame}
 
-
+\subsection{Primeras funciones}
 \begin{frame}{Primeros pasos}      %TODO
   \framesubtitle{Primeras funciones}
 
 \end{frame}
 
+\subsection{Listas}
 \begin{frame}{Primeros pasos}      %TODO
   \framesubtitle{Listas}
 
 \end{frame}
 
+\subsection{Tuplas}
 \begin{frame}{Primeros pasos}      %TODO
   \framesubtitle{Tuplas}
 
@@ -169,7 +192,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % TIPOS Y TYPECLASSES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
+\section{Tipos y Typeclasses}
 \begin{frame}{Tipos y \emph{Typeclasses}}      %TODO
 
 \end{frame}
@@ -177,7 +200,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % SINTAXIS EN FUNCIONES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
+\section{Sintaxis en funciones}
 \begin{frame}{Sintaxis en funciones}      %TODO
 
 \end{frame}
@@ -185,7 +208,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % RECURSION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
+\section{Recursión}
 \begin{frame}{Recursión}      %TODO
 
 \end{frame}
