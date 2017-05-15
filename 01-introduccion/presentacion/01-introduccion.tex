@@ -162,9 +162,9 @@
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{Primeras funciones}
-  \begin{block}{Función:}
+  % \begin{block}{Función:}
 
-  \end{block}
+  % \end{block}
   \texttt{Ejemplos:}
   \begin{minted}[bgcolor=bg]{haskell}
     doubleMe x = x + x
@@ -179,8 +179,8 @@
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{Listas}
-  \begin{block}{Listas:}
-  \end{block}
+  % \begin{block}{Listas:}
+  % \end{block}
   \texttt{Creando listas en un fichero \verb~.hs~:}
   \begin{minted}[bgcolor=bg]{haskell}
     list = [1,2,3,4,5]
@@ -200,8 +200,6 @@
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{Listas}
-  \begin{block}{Listas:}
-  \end{block}
   Las listas pueden concatenarse con el operador \verb~++~ y\\construirse con el operador \verb~:~
   \begin{minted}[bgcolor=bg]{shell}
     Prelude> [1..9] ++ [10..19]
@@ -273,8 +271,8 @@
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{Tuplas}
-  \begin{block}{Tuplas:}
-  \end{block}
+  % \begin{block}{Tuplas:}
+  % \end{block}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -289,10 +287,88 @@
 % SINTAXIS EN FUNCIONES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Sintaxis en funciones}
-\begin{frame}{Sintaxis en funciones}      %TODO
+\subsection{Pattern matching}
+\begin{frame}[fragile]
+  \frametitle{Sintaxis en funciones}
+  \framesubtitle{\emph{Pattern matching}}
+  \begin{minted}[bgcolor=bg]{haskell}
+    sayMe :: (Integral a) => a -> String
+    sayMe 1 = "One!"
+    sayMe 2 = "Two!"
+    sayMe 3 = "Three!"
+    sayMe 4 = "Four!"
+    sayMe 5 = "Five!"
+    sayMe x = "Not between 1 and 5"
+  \end{minted}
 
+  \begin{minted}[bgcolor=bg]{shell}
+    Prelude> :l introduccion.hs
+    [1 of 1] Compiling Main
+    ( introduccion.hs, interpreted )
+    Ok, modules loaded: Main.
+    *Main> sayMe 5
+    "Five!"
+  \end{minted}
 \end{frame}
 
+\subsection{Guards}
+\begin{frame}[fragile]
+  \frametitle{Sintaxis en funciones}
+  \framesubtitle{\emph{Guards}}
+  \begin{minted}[bgcolor=bg]{haskell}
+    compare :: (Ord a) => a -> a -> Ordering
+    a `compare` b
+       | a > b     = GT
+       | a == b    = EQ
+       | otherwise = LT
+  \end{minted}
+  \begin{minted}[bgcolor=bg]{shell}
+    Prelude> :l introduccion.hs
+    [1 of 1] Compiling Main
+    ( introduccion.hs, interpreted )
+    Ok, modules loaded: Main.
+    *Main> 1 `myCompare` 2
+    LT
+    *Main> 1 `myCompare` 0.5
+    GT
+  \end{minted}
+\end{frame}
+
+\subsection{where}
+\begin{frame}[fragile]
+  \frametitle{Sintaxis en funciones}
+  \framesubtitle{\emph{where}}
+  \begin{minted}[bgcolor=bg]{haskell}
+    initials :: String -> String -> String  
+    initials firstname lastname = [f] ++ ". " ++ [l] ++ "."  
+        where (f:_) = firstname  
+              (l:_) = lastname    
+  \end{minted}
+\end{frame}
+\subsection{let}
+\begin{frame}[fragile]
+  \frametitle{Sintaxis en funciones}
+  \framesubtitle{\emph{let}}
+  \begin{minted}[bgcolor=bg]{haskell}
+    cylinder :: (RealFloat a) => a -> a -> a  
+    cylinder r h = 
+        let sideArea = 2 * pi * r * h  
+            topArea = pi * r ^2  
+        in  sideArea + 2 * topArea  
+  \end{minted}
+\end{frame}
+\subsection{Case Expressions}
+\begin{frame}[fragile]
+  \frametitle{Sintaxis en funciones}
+  \framesubtitle{\emph{Case Expressions}}
+  \begin{minted}[bgcolor=bg]{haskell}
+    describeList :: [a] -> String  
+    describeList xs = "The list is " ++
+      case xs of [] -> "empty."  
+                 [x] -> "a singleton list."   
+                 xs -> "a longer list."  
+  \end{minted}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % RECURSION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
