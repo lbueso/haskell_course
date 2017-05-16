@@ -236,7 +236,6 @@
       Prelude> last [1..10]
       10
     \end{minted}
-
   \end{itemize}
 \end{frame}
 
@@ -271,16 +270,59 @@
 \begin{frame}[fragile]
   \frametitle{Primeros pasos}
   \framesubtitle{Tuplas}
-  % \begin{block}{Tuplas:}
-  % \end{block}
+  \begin{minted}[bgcolor=bg]{haskell}
+    tuple = (1, False)
+  \end{minted}
+  \texttt{Las operaciones básicas en las tuplas son:}
+  \begin{itemize}
+  \item \verb~fst~
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> let tuple = (1, False)
+      Prelude> fst tuple
+      1
+    \end{minted}
+  \item \verb~snd~
+    \begin{minted}[bgcolor=bg]{shell}
+      Prelude> let tuple = (1, False)
+      Prelude> snd tuple
+      False
+      Prelude>
+    \end{minted}
+  \end{itemize}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 % TIPOS Y TYPECLASSES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Tipos y Typeclasses}
-\begin{frame}{Tipos y \emph{Typeclasses}}      %TODO
+\begin{frame}[fragile]
+  \frametitle{Tipos y \emph{Typeclasses}}
+  \framesubtitle{Tipos}
+  \begin{minted}[bgcolor=bg]{haskell}
+    doubleMe :: Int -> Int
+    doubleMe x = x + x
 
+    doubleMe :: Int -> Int -> Int
+    doubleUs x y = doubleMe x + doubleMe y
+
+    doubleSmallNumber :: Int -> Int
+    doubleSmallNumber x = (if x > 100 then x else x*2) + 1
+  \end{minted}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Tipos y \emph{Typeclasses}}
+  \framesubtitle{\emph{Typeclasses}}
+  \begin{minted}[bgcolor=bg]{haskell}
+    doubleMe :: (Num a) => a -> a
+    doubleMe x = x + x
+
+    doubleMe :: (Num a) => a -> a -> a
+    doubleUs x y = doubleMe x + doubleMe y
+
+    doubleMe :: (Num a) => a -> a
+    doubleSmallNumber x = (if x > 100 then x else x*2) + 1
+  \end{minted}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -318,9 +360,9 @@
   \begin{minted}[bgcolor=bg]{haskell}
     compare :: (Ord a) => a -> a -> Ordering
     a `compare` b
-       | a > b     = GT
-       | a == b    = EQ
-       | otherwise = LT
+    | a > b     = GT
+    | a == b    = EQ
+    | otherwise = LT
   \end{minted}
   \begin{minted}[bgcolor=bg]{shell}
     Prelude> :l introduccion.hs
@@ -339,10 +381,10 @@
   \frametitle{Sintaxis en funciones}
   \framesubtitle{\emph{where}}
   \begin{minted}[bgcolor=bg]{haskell}
-    initials :: String -> String -> String  
-    initials firstname lastname = [f] ++ ". " ++ [l] ++ "."  
-        where (f:_) = firstname  
-              (l:_) = lastname    
+    initials :: String -> String -> String
+    initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
+    where (f:_) = firstname
+    (l:_) = lastname
   \end{minted}
 \end{frame}
 \subsection{let}
@@ -350,11 +392,11 @@
   \frametitle{Sintaxis en funciones}
   \framesubtitle{\emph{let}}
   \begin{minted}[bgcolor=bg]{haskell}
-    cylinder :: (RealFloat a) => a -> a -> a  
-    cylinder r h = 
-        let sideArea = 2 * pi * r * h  
-            topArea = pi * r ^2  
-        in  sideArea + 2 * topArea  
+    cylinder :: (RealFloat a) => a -> a -> a
+    cylinder r h =
+    let sideArea = 2 * pi * r * h
+    topArea = pi * r ^2
+    in  sideArea + 2 * topArea
   \end{minted}
 \end{frame}
 \subsection{Case Expressions}
@@ -362,11 +404,11 @@
   \frametitle{Sintaxis en funciones}
   \framesubtitle{\emph{Case Expressions}}
   \begin{minted}[bgcolor=bg]{haskell}
-    describeList :: [a] -> String  
+    describeList :: [a] -> String
     describeList xs = "The list is " ++
-      case xs of [] -> "empty."  
-                 [x] -> "a singleton list."   
-                 xs -> "a longer list."  
+    case xs of [] -> "empty."
+    [x] -> "a singleton list."
+    xs -> "a longer list."
   \end{minted}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
