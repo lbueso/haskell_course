@@ -1,9 +1,10 @@
 module Lists where
 
 {-
-A list: A list (whose elements has type t) could be an empty
-list [] or element with type t added to a head of a sequence
-of t typed elements.
+Lista:
+  Una lista cuyos elementos son de tipo t, podría ser una
+lista vacía [] o un elemento de tipo t añadido a la cabeza
+de una secuencia de elementos de tipo t. (eh:et)
 -}
 
 
@@ -18,263 +19,243 @@ l3 = [90,91,102,81,3,104,1007,96,50,1000]
 
 l4 = []
 
--- Auxiliary Functions
+-- Funciones auxiliares
 
 {-
-Implement a function that, ginven a list, returns the first element.
-If an empty list is given, returns []
+Implementa una función que dada una lista, devuelva su primer elemento.
+Si es vacía, la lista devuelve: 
+   error "No se puede obtener un elemento de una lista vacía"
 -}
 myHead :: [a] -> a
-myHead l =
+myHead [] = error "No se puede obtener un elemento de una lista vacía"
+myHead [x] = x
+myHead (x:xs) = x
 
 {-
-Implement a function that, given a list, returns the whole list but the first elemt.
-Ignore the empty list case
+Implementa una función que data una lista, devuelva toda la lista excepto el primer elemento.
 -}
 myTail :: [a] -> [a]
-myTail l =
+myTail l = error "todo"
 
 {-
-Implement a function that, given a list, returns the whole list but the last element.
-Ignore the empty list case
+Implementa una función que dada una lista devuelva toda la lista excepto el último elemento.
 -}
 myInit :: [a] -> [a]
-myInit =
+myInit = error "todo"
+
 
 {-
-Implement a function that, given a list, returns the very last element.
-If an empty list is given, returns []
+Implementa una función que dada una lista devuelva el último elemento.
 -}
 myLast :: [a] -> [a]
-myLast l =
+myLast l = error "todo"
 
 {-
-implement a function that, given a list of t elements and a elemtn of type t,
-retruns a new list whith the given list at the beginning and the element at the end
+Implementa una función que dada un lista de elementos de tipo a, devuelva
+  una lista con valor dado al final.
 -}
 myAppend :: [a] -> a -> [a]
-myAppend l e =
+myAppend l e = error "todo"
 
 {-
-Implement a function that, given a list, returns the same list reversed.
-TIP: Use myAppend function.
+Implementa una función que dada una lista, devuelva la lista del revés.
+Conseto: usa la función myAppend
 -}
 myReverse :: [a] -> [a]
-myReverse = 
+myReverse = error "todo" 
 
 {-
-Implement a function that, given two lists, returns only one list which is the
-Concatenation of the two given lists.
-TIP: Use myAppend function
+Implementa una función que dadas dos litas, devuelva una sola lista que es la
+  concatenación de las dos listas.
+Conseto: usa myAppen
 -}
 myConcat :: [a] -> [a] -> [a]
-myConcat l1 l2 =
+myConcat l1 l2 = error "todo"
 
-
-
+                 
 -- MAP
-
 {-
-Implement a function that, given a number, calculates his square
+Implementa una función que dado un número cualquiera, calcule su cuadrado.
 -}
 square :: Num a => a -> a
-square n =
+square n = error "todo"
 
 {-
-Implement a function that, given a list of numbers, calculates the square of all its
-elements and return them as a new list.
-TIP: Use the square function
+Implementa una función que dada una lista de números, calcule el cuadrado de todos
+esos número y los devuelva en forma de lista.
+Conseto: usa la función square.
 -}
 squares :: Num a => [a] -> [a]
-squares l =
+squares l = error "todo"
 
 {-
-Implement a function that, given a list of numbers, returns a new list with the
-numbers converted to strings.
-TIP: Use show function
+Implementa una función que dada una lista de números, devuelva una lista con los
+  números convertidos a string.
+Conseto: usa la función show
 -}
 stringize :: Show a => [a] -> [String]
-stringize l =
+stringize l = error "todo"
 
 {-
-MyMap:
-MyMap is a function that receives another function and a list.
-What this function does is to apply the received function to each element of the
-given list and returns a new list with the results
+myMap es una función que recibe una función y una lista.
+Esta función aplica la función recibida a cada elemento de la lista dada y devuelve
+  una lista con el resultado.
 -}
 myMap :: (a -> b) -> [a] -> [b]
-myMap f a =
+myMap f a = error "todo"
 
 {-
-Implement the squares function using myMap
+  Implementa squares usando myMap
 -}
 squares2 :: Num a => [a] -> [a]
-squares2 l =
+squares2 l = error "todo"
 
 {-
-Implement the stringize using myMap
+  Implementa stringize usando myMap
 -}
-stringize2 :: Show a => [a] -> [String]
-stringize2 l =
 
+stringize2 :: Show a => [a] -> [String]
+stringize2 l = error "todo"
 
 
 -- FILTER
 
 {-
-Implement a function that returns true if a given number is eve, otherwise returns false
+  Implementa una función que devuelve True si un número dado es par, en caso contrario, False
 -}
 myEven :: Integral a => a -> Bool
-myEven x =
+myEven x = error "todo"
+
 
 {-
-Implement a function that returns true if the given is greater than 100, otherwise returns
-false
+  Implementa una función que devuelve True si un número dado es mayor que 100, en otro caso, False
 -}
 myBig :: (Num a, Ord a) => a -> Bool
-myBig x =
+myBig x = error "todo"
 
 {-
-Implement a function that, given a list of Numbers, returns a new list with only the
-evens numbers
+  Implementa una función que dada una lista de números, devuelve una lista con solo los pares.
 -}
 myEvens :: Integral a => [a] -> [a]
-myEvens l =
+myEvens l = error "todo"
 
 {-
-Implement a function that, given a list of Numbers, returns a new ;ist with only the
-numbers bigger than 100.
-TIP: Use myBig function
+  Implementa una función que dada una lista de números, devuelva una lista con solo los
+  números mayores que 100.
 -}
 myBigs :: (Num a, Ord a) => [a] -> [a]
-myBigs l =
+myBigs l = error "todo"
 
 {-
-myFIlter:
-myFilter is a function that receives another boolean function and a list.
-What this function does is to apply the boolean function to each element of the
-given list and returns a new list with only the elements thar satifies the
-boolean function, e.i. that returns true in the boolean function.
+  myFilter es una función que recibe otra función booleana y una lista.
+  Esta función aplica la función booleana a cada elemento de la lista,
+  devuelve una lista con solo los elementos que evaluan a True en la función
+  booleana.
 -}
 myFilter :: (a -> Bool) -> [a] -> [a]
-myFilter f l =
+myFilter f l = error "todo"
 
 {-
-Implement the myEvens funtion using myFilter
+  Implementa la función myEvens usando myFilter
 -}
 myEvens2 :: Integral a => [a] -> [a]
-myEvens2 l =
+myEvens2 l = error "todo"
 
 
 
 -- FOLD
 
 {-
-Implement a function that, given a list, returns the length of the list
-Ignore the Nil case.
+  Implementa una función que dada una lista, devuelva la longitud de la lista.
 -}
 myLength :: [a] -> Int 
-myLength l =
+myLength l = error "todo"
+
 
 {-
-Implement a funtion that, given a list of numbers, returns the summatory of all numbers.
+  Implementa una función que, dada una lista de números, devuelva la suma de ellos.
 -}
 mySum :: Num a => [a] -> a
-mySum l =
+mySum l = error "todo"
+
 
 {-
-Implement a function that, given a list of numbers, returns the maximum number
-of the list.
-Ignore the Nil case.
+  Implementa una función que dada una lista de números, devuelva el mayor número de la lista.
 -}
 myMaximum :: (Num a, Ord a) => [a] -> a
-myMaximum l =
-
+myMaximum l = error "todo"
 
 {-
-myFold:
-myFold is a functions that receives another functiona an initial value and a list.
-This function is pretty difficult, suppose the given function is f, what this myFold
-does is to apply the function f to each element and the initial value and the result is
-"stored" as a new initial value, this is waht we call "the carry". In a more procedural
-way:
+  myFold:
+  myFold es una función que recibe una función, un valor inicial y una lista.
+  Dada una función f, myFold aplica esta función f al valor inicial y al primer elemento de la lista.
+  Después, el resultado de esta operación se toma como nuevo valor inicial, y se vuelve a aplicar
+  myFold al resto de la lista.
+  
+  Este valor que vamos calculando recibe el nombre de acumulador (acc).
 
-carry = 0
-for e in MyList
-    carry = f(carry, e)
-
-return carry
--}
+-} 
 myFold :: Foldable t => (b -> a -> b) -> b -> t a -> b
-myFold f acc l =
+myFold f acc l = error "todo"
 
 {-
-myFoldh:
-myFoldh works similar as myFoldl but it uses the head of the MyList as initial value.
-Ignore the Nil case.
-TIP: Use myFold function
+  myFoldh:
+  myFoldh funciona de forma similar a myFold, pero usa la cabeza de la lista dada como valor inicial.
+  
+  Implementa la función myFoldh.
+  
+  Conseto: usa la función myFold
 -}
 myFoldh :: Foldable t => (b -> a -> b) -> t a -> b
-myFoldh f l =
-
+myFoldh f l = error "todo"
+             
 {-
-Implement length using myFold
+  Implementa myLenght usando myFold
 -}
 myLength2 :: [a] -> Int
-myLength2 l =
+myLength2 l = error "todo"
 
 {-
-Implement sum using myFold or myFoldh.
-In case of using myFoldh, ignore the Nil case.
+  Implementa la función mySum con myFold
 -}
 mySum2 :: Num a => [a]  -> a
-mySum2 l =
+mySum2 l = error "todo"
 
 mySum2h :: Num a => [a] -> a
-mySum2h l =
+mySum2h l = error "todo"
 
 {-
-Implement myMaximum using myFold or myFoldh.
-In case of using myFoldh, ignore the Nil case.
+  Implementa la función myMaximum con myFold
 -}
 myMaximum2 :: (Num a, Ord a) => [a] -> a
-myMaximum2 l =
+myMaximum2 l = error "todo"
 
 myMaximum2h :: (Num a, Ord a) => [a] -> a
-myMaximum2h =
+myMaximum2h = error "todo"
 
 
 -- MAYBE
-
 {-
-Maybe:
-Maybe type encapsulates optional value. A value of type Maybe a either contains a value
-of type a (represented as Just a), or it is empty (Represented as Nothing) -- Haskell.org definition
-
-The idea is to implement the functions above using Maybe in such way the [] case do not raises an exception.
+  Maybe:
+  El tipo Maybe encapsula valores opcionales. Un valor de tipo Maybe es o bien un valor represetado
+  como Just a, o no es, representado como Nothing.
+  
+  La idea es reimplementar las funciones de arriba usando Maybe para que en el caso en los que
+  lanzaban excepción, ahora devuelvan un Nothing.
 -}
 
 {-
-Implement myHead so it return Just a or Nothing
+  Implementa myHead para que devuelva Just a, o Nothing
 -}
 mHead :: [a] -> Maybe a
-mHead l =
+mHead l = error "todo"
 
-{-
-Implement myTail so it return Just list or Nothing
--}
 mTail :: [a] -> Maybe [a]
-mTail l =
+mTail l = error "todo"
 
-{-
-Implement myInit so it returns Just list or Nothin
--}
 mInit :: [a] -> Maybe [a]
-mInit l =
+mInit l = error "todo"
 
-{-
-Implement myLast so it returns Just a or Nothing
--}
 mLast :: [a] -> Maybe a
-mLast l =
+mLast l = error "todo"
 
