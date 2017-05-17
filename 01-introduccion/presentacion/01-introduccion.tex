@@ -360,9 +360,9 @@
   \begin{minted}[bgcolor=bg]{haskell}
     compare :: (Ord a) => a -> a -> Ordering
     a `compare` b
-    | a > b     = GT
-    | a == b    = EQ
-    | otherwise = LT
+        | a > b     = GT
+        | a == b    = EQ
+        | otherwise = LT
   \end{minted}
   \begin{minted}[bgcolor=bg]{shell}
     Prelude> :l introduccion.hs
@@ -383,8 +383,8 @@
   \begin{minted}[bgcolor=bg]{haskell}
     initials :: String -> String -> String
     initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
-    where (f:_) = firstname
-    (l:_) = lastname
+        where (f:_) = firstname
+              (l:_) = lastname
   \end{minted}
 \end{frame}
 \subsection{let}
@@ -394,9 +394,9 @@
   \begin{minted}[bgcolor=bg]{haskell}
     cylinder :: (RealFloat a) => a -> a -> a
     cylinder r h =
-    let sideArea = 2 * pi * r * h
-    topArea = pi * r ^2
-    in  sideArea + 2 * topArea
+        let sideArea = 2 * pi * r * h
+            topArea = pi * r ^2
+        in  sideArea + 2 * topArea
   \end{minted}
 \end{frame}
 \subsection{Case Expressions}
@@ -406,9 +406,9 @@
   \begin{minted}[bgcolor=bg]{haskell}
     describeList :: [a] -> String
     describeList xs = "The list is " ++
-    case xs of [] -> "empty."
-    [x] -> "a singleton list."
-    xs -> "a longer list."
+        case xs of [] -> "empty."
+                   [x] -> "a singleton list."
+                   xs -> "a longer list."
   \end{minted}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -416,7 +416,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \section{Recursión}
 \begin{frame}[fragile]
-  \frametitle{Recusión}
+  \frametitle{Recursión}
   \begin{minted}[bgcolor=bg]{haskell}
     factorial :: Num a => a -> a
     factorial 0 = 1
@@ -425,7 +425,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{Recusión}
+  \frametitle{Recursión}
   \begin{minted}[bgcolor=bg]{haskell}
     duplicar :: Num a => [a] -> [a]
     duplicar []     = []
