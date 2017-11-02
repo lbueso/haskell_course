@@ -1,27 +1,33 @@
 \section{Recursión}
 \begin{frame}[fragile]
   \frametitle{Recursión}
-  \begin{minted}[bgcolor=bg]{haskell}
-    factorial :: Num a => a -> a
-    factorial 0 = 1
-    factorial n = n * factorial (n - 1)
-  \end{minted}
+  {\color{white}
+    \begin{minted}[bgcolor=bg]{haskell}
+  factorial :: Num a => a -> a
+  factorial 0 = 1
+  factorial n = n * factorial (n - 1)
+    \end{minted}
+  }
 \end{frame}
 
 \begin{frame}[fragile]
   \frametitle{Recursión}
-  \begin{minted}[bgcolor=bg]{haskell}
-    duplicar :: Num a => [a] -> [a]
-    duplicar []     = []
-    duplicar [x]    = [x*2]
-    duplicar (x:xs) = (x*2):(duplicar xs)
-  \end{minted}
-  \begin{minted}[bgcolor=bg]{haskell}
-    duplicar :: Num a => [a] -> [a]
-    duplicar = map ((*) 2)
-  \end{minted}
+  {\color{white}
+    \begin{minted}[bgcolor=bg]{haskell}
+  duplicar :: Num a => [a] -> [a]
+  duplicar []     = []
+  duplicar [x]    = [x*2]
+  duplicar (x:xs) = (x*2):(duplicar xs)
+    \end{minted}
+  }
+  {\color{white}
+    \begin{minted}[bgcolor=bg]{haskell}
+  duplicar :: Num a => [a] -> [a]
+  duplicar = map ((*) 2)
+    \end{minted}
+  }
 \end{frame}
 
 \begin{frame}{Aclaraciones}
-  Todo es mentira.
+
 \end{frame}
