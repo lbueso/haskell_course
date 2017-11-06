@@ -1,0 +1,24 @@
+* Introduccion a la Programación Funcional en Haskell
+
+  Este repositorio conciene los recursos utilizados en el curso de
+  Introducción a la programación funcional en ACM UPM
+
+** Estructura de los directorios
+
+#+BEGIN_SRC 
+.
+├── 01-introduccion
+│   ├── presentacion
+│   └── src
+├── 02-Funciones_de_orden_superior
+│   ├── presentacion
+│   └── src
+└── 03-Types_and_Typeclasses
+...
+#+END_SRC
+
+   En cada sección del curso se pueden diferenciar 2 directorios:
+   - ~presentacion~ que contiene los recursos necesarios para generar
+     el beamer de la presentación y una copia en pdf de la misma.
+   - ~src~ que contiene los ejercicios sin resolver realizados durante
+     el taller.
