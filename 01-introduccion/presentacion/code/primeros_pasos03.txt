@@ -1,0 +1,4 @@
+Prelude> 2 + 2
+4
+Prelude> True && False
+False

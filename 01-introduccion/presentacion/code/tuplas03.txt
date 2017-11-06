@@ -1,0 +1,4 @@
+Prelude> let tuple = (1, False)
+Prelude> snd tuple
+False
+Prelude>

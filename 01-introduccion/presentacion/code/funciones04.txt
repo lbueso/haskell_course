@@ -1,0 +1,8 @@
+Prelude> :l introduccion.hs
+[1 of 1] Compiling Main
+( introduccion.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> 1 `myCompare` 2
+LT
+*Main> 1 `myCompare` 0.5
+GT

@@ -6,22 +6,12 @@
   \begin{itemize}
   \item\texttt{Así abrimos el intérprete de Haskell}
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  > ghci
-  GHCi, version 8.0.2: http://www.haskell.org/ghc/
-  :? for help
-  Prelude>
-      \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeros_pasos01.txt}
     }
 
   \item\texttt{Podemos escribir expresiones aritméticas y lógicas:}
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> 2 + 2
-  4
-  Prelude> True && False
-  False
-      \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeros_pasos02.txt}
     }
   \end{itemize}
 \end{frame}
@@ -32,25 +22,12 @@
   \begin{itemize}
   \item\texttt{Podemos llamar a funciones}
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> 2 + 2
-  4
-  Prelude> True && False
-  False
-      \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeros_pasos03.txt}
     }
 
   \item\texttt{Errores}
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> 2 + "hola"
-
-  <interactive>:6:1: error:
-  • No instance for (Num [Char]) arising from a use
-  of ‘+’
-  • In the expression: 2 + "hola"
-  In an equation for ‘it’: it = 2 + "hola"
-      \end{minted}
+        \inputminted[bgcolor=bg]{text}{code/primeros_pasos04.txt}
     }
   \end{itemize}
 \end{frame}
@@ -61,20 +38,7 @@
   \begin{itemize}
   \item\texttt{Expresiones útiles:}
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-   Prelude> :t 5
-   5 :: Num t => t
-   Prelude> :t 2
-   2 :: Num t => t
-   Prelude> :t "hola"
-   "hola" :: [Char]
-
-   Prelude> :l introduccion.hs
-   [1 of 1] Compiling Main
-   ( introduccion.hs, interpreted )
-   Ok, modules loaded: Main.
-   *Main>
-      \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeros_pasos05.txt}
     }
   \end{itemize}
 \end{frame}
@@ -88,13 +52,7 @@
   % \end{block}
   \texttt{Ejemplos:}
   {\color{white}
-    \begin{minted}[bgcolor=bg]{haskell}
-  doubleMe x = x + x
-
-  doubleUs x y = doubleMe x + doubleMe y
-
-  doubleSmallNumber x = (if x > 100 then x else x*2) + 1
-    \end{minted}
+    \inputminted[bgcolor=bg]{haskell}{code/primeras_funciones01.hs}
   }
 \end{frame}
 
@@ -106,21 +64,11 @@
   % \end{block}
   \texttt{Creando listas en un fichero \verb~.hs~:}
   {\color{white}
-    \begin{minted}[bgcolor=bg]{haskell}
-  list = [1,2,3,4,5]
-  list' = [1..5]
-    \end{minted}
+    \inputminted[bgcolor=bg]{haskell}{code/primeras_funciones02.hs}
   }
   \texttt{Ejemplos de listas en el GHCi}
   {\color{white}
-    \begin{minted}[bgcolor=bg]{text}
-  Prelude> let list = [1,2,3,4,5]
-  Prelude> let list1 = [1..5]
-  Prelude> list == list1
-  list == list1
-  True
-  Prelude>
-    \end{minted}
+    \inputminted[bgcolor=bg]{text}{code/primeras_funciones03.txt}
   }
 \end{frame}
 
@@ -129,18 +77,7 @@
   \framesubtitle{Listas}
   Las listas pueden concatenarse con el operador \verb~++~ y\\construirse con el operador \verb~:~
   {\color{white}
-    \begin{minted}[bgcolor=bg]{text}
-  Prelude> [1..9] ++ [10..19]
-  [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19]
-  Prelude> "hello " ++ "world!"
-  "hello world!"
-  Prelude> 1:[2..5]
-  1:[2..5]
-  [1,2,3,4,5]
-  Prelude> 'h':"ello"
-  "hello"
-  Prelude> 1:text [1]
-    \end{minted}
+    \inputminted[bgcolor=bg]{text}{code/primeras_funciones04.txt}
   }
 \end{frame}
 
@@ -151,24 +88,15 @@
   \begin{itemize}
   \item \verb~head~:
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> head [1..10]
-  1
-      \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeras_funciones05.txt}
     }
   \item \verb~tail~:
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> tail [1..10]
-  [2,3,4,5,6,7,8,9,10]
-    \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeras_funciones06.txt}
     }
   \item \verb~last~:
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> last [1..10]
-  10
-    \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeras_funciones07.txt}
     }
   \end{itemize}
 \end{frame}
@@ -177,33 +105,21 @@
   \frametitle{Primeros pasos}
   \framesubtitle{Listas}
   \begin{itemize}
-  \item \verb~init~:
-    {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> init [1..10]
-  [1,2,3,4,5,6,7,8,9]
-    \end{minted}
-    }
+  % \item \verb~init~:
+  %   {\color{white}
+  %     \inputminted[bgcolor=bg]{text}{code/primeras_funciones08.txt}
+  %   }
   \item \verb~length~:
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> length [1..10]
-  10
-    \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeras_funciones09.txt}
     }
   \item \verb~reverse~:
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> reverse [1..10]
-  [10,9,8,7,6,5,4,3,2,1]
-    \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeras_funciones10.txt}
     }
   \item \verb~take~:
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-   Prelude> take 4 [1..10]
-   [1,2,3,4]
-    \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/primeras_funciones11.txt}
     }
   \end{itemize}
 \end{frame}
@@ -213,28 +129,17 @@
   \frametitle{Primeros pasos}
   \framesubtitle{Tuplas}
   {\color{white}
-    \begin{minted}[bgcolor=bg]{haskell}
-  tuple = (1, False)
-  \end{minted}
+    \inputminted[bgcolor=bg]{haskell}{code/tuplas01.hs}
   }
   \texttt{Las operaciones básicas en las tuplas son:}
   \begin{itemize}
   \item \verb~fst~
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> let tuple = (1, False)
-  Prelude> fst tuple
-  1
-    \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/tuplas02.txt}
     }
   \item \verb~snd~
     {\color{white}
-      \begin{minted}[bgcolor=bg]{text}
-  Prelude> let tuple = (1, False)
-  Prelude> snd tuple
-  False
-  Prelude>
-    \end{minted}
+      \inputminted[bgcolor=bg]{text}{code/tuplas03.txt}
     }
   \end{itemize}
 \end{frame}

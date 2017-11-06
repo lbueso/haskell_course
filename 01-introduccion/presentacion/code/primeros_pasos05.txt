@@ -1,0 +1,12 @@
+Prelude> :t 5
+5 :: Num t => t
+Prelude> :t 2
+2 :: Num t => t
+Prelude> :t "hola"
+"hola" :: [Char]
+
+Prelude> :l introduccion.hs
+[1 of 1] Compiling Main
+( introduccion.hs, interpreted )
+Ok, modules loaded: Main.
+*Main>

@@ -3,16 +3,7 @@
   \frametitle{Tipos y \emph{Typeclasses}}
   \framesubtitle{Tipos}
   {\color{white}
-    \begin{minted}[bgcolor=bg]{haskell}
-  doubleMe :: Int -> Int
-  doubleMe x = x + x
-
-  doubleMe :: Int -> Int -> Int
-  doubleUs x y = doubleMe x + doubleMe y
-
-  doubleSmallNumber :: Int -> Int
-  doubleSmallNumber x = (if x > 100 then x else x*2) + 1
-    \end{minted}
+    \inputminted[bgcolor=bg]{haskell}{code/tipos.hs}
   }
 \end{frame}
 
@@ -20,15 +11,6 @@
   \frametitle{Tipos y \emph{Typeclasses}}
   \framesubtitle{\emph{Typeclasses}}
   {\color{white}
-    \begin{minted}[bgcolor=bg]{haskell}
-  doubleMe :: (Num a) => a -> a
-  doubleMe x = x + x
-
-  doubleMe :: (Num a) => a -> a -> a
-  doubleUs x y = doubleMe x + doubleMe y
-
-  doubleMe :: (Num a) => a -> a
-  doubleSmallNumber x = (if x > 100 then x else x*2) + 1
-    \end{minted}
+    \inputminted[bgcolor=bg]{haskell}{code/typeclass.hs}
   }
 \end{frame}

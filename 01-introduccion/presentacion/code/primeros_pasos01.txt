@@ -1,0 +1,4 @@
+> ghci
+GHCi, version 8.0.2: http://www.haskell.org/ghc/
+:? for help
+Prelude>

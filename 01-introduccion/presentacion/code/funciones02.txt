@@ -1,0 +1,6 @@
+Prelude> :l introduccion.hs
+[1 of 1] Compiling Main
+( introduccion.hs, interpreted )
+Ok, modules loaded: Main.
+*Main> sayMe 5
+"Five!"

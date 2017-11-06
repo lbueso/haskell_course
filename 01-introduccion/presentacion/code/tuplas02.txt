@@ -1,0 +1,3 @@
+Prelude> let tuple = (1, False)
+Prelude> fst tuple
+1
