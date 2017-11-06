@@ -1,0 +1,4 @@
+*Main> mult2y4 = multThree 2 4
+*Main> mult2y4 3
+24
+*Main>

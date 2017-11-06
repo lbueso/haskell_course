@@ -1,0 +1,4 @@
+Prelude> max 4 5
+5
+Prelude> (max 4) 5
+5

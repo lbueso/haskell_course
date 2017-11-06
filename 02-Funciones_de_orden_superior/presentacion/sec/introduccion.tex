@@ -1,0 +1,34 @@
+\subsection{Curried functions}
+
+\begin{frame}[fragile]
+  \frametitle{Introducción}
+  \framesubtitle{\textit{Curried functions}}
+  Las funciones en Haskell reciben \textbf{un único argumento}.
+
+  {\color{white}
+    \inputminted[bgcolor=bg]{text}{code/curr00.txt}
+  }
+
+  Si observamos el tipo de max:
+  {\color{white}
+    \inputminted[bgcolor=bg]{haskell}{code/curr01.hs}
+  }
+  que es equivalente a:
+  {\color{white}
+    \inputminted[bgcolor=bg]{haskell}{code/curr02.hs}
+  }
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Introducción} \framesubtitle{\textit{Curried functions}}
+  Las siguientes funciones son equivalentes:
+  {\color{white}
+    \inputminted[bgcolor=bg]{haskell}{code/curr03.hs}
+  }
+  Entonces... ¿Qué sucede cuando llamamos a una función con menos
+  argumentos de los que deberíamos?
+  {\color{white}
+    \inputminted[bgcolor=bg]{text}{code/curr04.txt}
+  }
+\end{frame}
