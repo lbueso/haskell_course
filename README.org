@@ -9,10 +9,10 @@
 .
 ├── 01-introduccion
 │   ├── presentacion
-│   └── src
+│   └── ejercicios
 ├── 02-Funciones_de_orden_superior
 │   ├── presentacion
-│   └── src
+│   └── ejercicios
 └── 03-Types_and_Typeclasses
 ...
 #+END_SRC
@@ -20,5 +20,21 @@
    En cada sección del curso se pueden diferenciar 2 directorios:
    - ~presentacion~ que contiene los recursos necesarios para generar
      el beamer de la presentación y una copia en pdf de la misma.
-   - ~src~ que contiene los ejercicios sin resolver realizados durante
-     el taller.
+   - ~ejercicios~ que contiene los ejercicios sin resolver realizados
+     durante el taller.
+** Software y Herramientas necesarias
+   Para la realización de los ejercicios es necesaria la instalación de:
+   - ~ghc~ (Glasgow Haskell Compiler), que será el compilador de Haskell
+     que usaremos en el taller.
+   - ~ghci~, que será el intérprete de Haskell que usaremos en el taller.
+   - ~stack~, que es la herramienta de Haskell que usaremos para la
+     realización de ejercicios durante el taller.
+** Contenido
+*** Introducción
+    Este módulo contiene la información necesaria para familiarizarse
+    con la sintaxis de Haskell y su intérprete. Además contiene una
+    serie de ejercicios de introducción.
+*** Funciones de orden superior
+    Este módulo explica qué son las funciones de orden superior y cómo
+    usarlas, además de los ejemplos más típicos de las mismas sobre un
+    par de estructuras de datos
