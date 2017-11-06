@@ -1,0 +1,38 @@
+* Ejercicios de Introducción a Haskell
+  Los ejercicios se encuentran en un proyecto de stack. La jerarquía
+  del proyecto es la siguiente:
+
+#+BEGIN_SRC 
+.
+├── LICENSE
+├── README.org
+├── Setup.hs
+├── app
+│   └── Main.hs
+├── ejercicios.cabal
+├── src
+│   └── Lib.hs
+├── stack.yaml
+└── test
+    └── Spec.hs
+
+3 directories, 9 files
+
+#+END_SRC
+  
+  Para la realización de los ejercicios solo debemos editar el fichero
+  Lib.hs y modificar las funciones sin con la palabra ~undefined~.
+
+  Si queremos ejecutar un intérprete de Haskell cargando nuestras
+  funciones del proyecto debemos ejecutar:
+
+#+BEGIN_SRC 
+stack ghci
+#+END_SRC
+
+  Finalmente si queremos ejecutar los tests sobre nuestros ejercicios
+  debemos ejecutar el comando:
+
+#+BEGIN_SRC 
+stack test
+#+END_SRC
