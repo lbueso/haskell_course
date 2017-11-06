@@ -1,6 +1,6 @@
 * Introduccion a la Programación Funcional en Haskell
 
-  Este repositorio conciene los recursos utilizados en el curso de
+  Este repositorio contiene los recursos utilizados en el curso de
   Introducción a la programación funcional en ACM UPM
 
 ** Estructura de los directorios
