@@ -47,39 +47,65 @@
 \begin{frame}
   \frametitle{Funciones de orden Superior}
   \framesubtitle{\textit{map}}
-  \begin{center}                %Esto no habría sido posible sin Pablo Conde de la Mata
-    \begin{tikzpicture} [node distance=1.5cm, every node/.style={font=\sffamily}, align=center]
-      \node (raiz)   {$(:)$};
-      \node (hijo1) [below of=raiz, xshift=-1cm] {$f\thinspace1$};
-      \node (hijo2) [below of=raiz, xshift=1cm] {$(:)$};
+  La función \textit{map} es una función de orden superior
+  que aplica \textit{f} a una estructura de datos.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Su tipo es:
+      \inputminted[bgcolor=bg]{haskell}{code/map.hs}
+    \end{column}
+    \begin{column}{0.5\textwidth}  %%<--- here
+      Su representación gráfica sobre la lista [1,2,3]:
+      \begin{center} %Esto no habría sido posible sin Pablo Conde de la Mata
+        \begin{tikzpicture} [node distance=1.5cm, every node/.style={font=\sffamily}, align=center]
+          \node (raiz)   {$(:)$};
+          \node (hijo1) [below of=raiz, xshift=-1cm] {$f\thinspace1$};
+          \node (hijo2) [below of=raiz, xshift=1cm] {$(:)$};
 
-      \node (hijo3) [below of=hijo2, xshift=-1cm] {$f\thinspace2$};
-      \node (hijo4) [below of=hijo2, xshift=1cm] {$(:)$};
+          \node (hijo3) [below of=hijo2, xshift=-1cm] {$f\thinspace2$};
+          \node (hijo4) [below of=hijo2, xshift=1cm] {$(:)$};
 
-      \node (hijo5) [below of=hijo4, xshift=-1cm] {$f\thinspace3$};
-      \node (hijo6) [below of=hijo4, xshift=1cm] {$[]$};
+          \node (hijo5) [below of=hijo4, xshift=-1cm] {$f\thinspace3$};
+          \node (hijo6) [below of=hijo4, xshift=1cm] {$[]$};
 
 
-      \draw[->] (raiz) -- (hijo1);
-      \draw[->] (raiz) -- (hijo2);
-      \draw[->] (hijo2) -- (hijo3);
-      \draw[->] (hijo2) -- (hijo4);
-      \draw[->] (hijo4) -- (hijo5);
-      \draw[->] (hijo4) -- (hijo6);
-    \end{tikzpicture}
-  \end{center}
+          \draw[->] (raiz) -- (hijo1);
+          \draw[->] (raiz) -- (hijo2);
+          \draw[->] (hijo2) -- (hijo3);
+          \draw[->] (hijo2) -- (hijo4);
+          \draw[->] (hijo4) -- (hijo5);
+          \draw[->] (hijo4) -- (hijo6);
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+  \end{columns}
+
 \end{frame}
 
 \subsection{filter}
 \begin{frame}
   \frametitle{Funciones de orden Superior}
-  \framesubtitle{\textit{filter}}
+  \framesubtitle{\textit{filter}} La función \textit{filter} es una
+  función que recibe un predicado y una lista y devuelve la lista
+  filtrada.
+  \inputminted[bgcolor=bg]{haskell}{code/filter.hs}
+  Ejemplo:
+  {\color{white}
+    \inputminted[bgcolor=bg]{text}{code/filter.txt}
+  }
 \end{frame}
 
 \subsection{fold}
 \begin{frame}
   \frametitle{Funciones de orden Superior}
-  \framesubtitle{\textit{foldr}}
+  \framesubtitle{\textit{fold}} La función \textit{fold} es una
+  función de orden superior que permite compactar una estructura de
+  datos a un solo valor.
+  % \begin{columns}
+  %   \begin{column}{0.5\textwidth}
+  \inputminted[bgcolor=bg]{haskell}{code/foldr.hs}
+  % \end{column}
+  % \begin{column}{0.5\textwidth}
   \begin{center}                %Esto no habría sido posible sin Pablo Conde de la Mata
     \begin{tikzpicture} [node distance=1.5cm, every node/.style={font=\sffamily}, align=center]
       \node (raiz)   {$f$};
@@ -101,4 +127,6 @@
       \draw[->] (hijo4) -- (hijo6);
     \end{tikzpicture}
   \end{center}
+  % \end{column}
+  % \end{columns}
 \end{frame}

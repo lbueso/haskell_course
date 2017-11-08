@@ -43,11 +43,11 @@ main = hspec $ do
       property $ ((\x -> (x > 100) == Lib.big x) :: Int -> Bool)
     it "pruebas de evens..." $ do
       property $ (prop_f_list :: List_to_list_i) (filter Prelude.even) Lib.evens
-    it "prueba de bigs" $ do
+    it "pruebas de bigs..." $ do
       property $ (prop_f_list :: List_to_list_i) (filter (> 100)) Lib.bigs
-    it "prueba de length" $ do
+    it "pruebas de length..." $ do
       property $ (prop_f_list :: List_to_e) Prelude.length Lib.length
-    it "prueba de sum" $ do
+    it "pruebas de sum..." $ do
       property $ (prop_f_list :: List_to_e) Prelude.sum Lib.sum
-    it "prueba de maximum" $ do
+    it "pruebas de maximum..." $ do
       property $ (prop_f_list :: List_to_e) Prelude.maximum Lib.maximum

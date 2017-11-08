@@ -1,0 +1,8 @@
+Prelude> :t even
+even :: Integral a => a -> Bool
+Prelude> :t odd
+odd :: Integral a => a -> Bool
+Prelude> filter even [1,2,3,4]
+[2,4]
+Prelude> filter odd [1,2,3,4]
+[1,3]
