@@ -46,12 +46,6 @@ stringize = undefined
 -- FILTER
 
 {-
-  Implementa una función que devuelve True si un número dado es mayor que 100, en otro caso, False
--}
-big :: (Num a, Ord a) => a -> Bool
-big = undefined
-
-{-
   Implementa una función que dada una lista de números, devuelve una lista con solo los pares.
 -}
 evens :: Integral a => [a] -> [a]
