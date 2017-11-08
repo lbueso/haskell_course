@@ -1,4 +1,4 @@
-\documentclass{beamer}
+\documentclass[tikz]{beamer}
 
 \usetheme{simple}
 
@@ -6,7 +6,15 @@
 \usepackage[scale=2]{ccicons}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
+\usepackage{tikz}
 \usepackage{minted}
+
+\usepackage{tikz, geometry}     % Por Pablou
+ \usetikzlibrary{arrows.meta, shapes.geometric, shadows.blur, babel}
+ \geometry{a4paper, total={170mm,257mm}, left=25mm, right=25mm, top=25mm}
+ \tikzset{
+  >={Latex[width=2mm,length=2mm]},
+}
 
 \usemintedstyle{monokai}
 
@@ -37,5 +45,7 @@
 \input{sec/introduccion}
 
 \input{sec/definicion}
+
+\input{sec/map_filter}
 
 \end{document}

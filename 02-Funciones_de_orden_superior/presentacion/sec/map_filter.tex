@@ -1,0 +1,60 @@
+\section{Estructuras de datos}
+\subsection{Listas}
+\subsection{Árboles Binarios}
+\begin{frame}
+  \frametitle{Estructuras de datos}
+  \framesubtitle{Definición}
+  Estas son las implementaciones de las estructuras
+  de datos que vamos a utilizar:
+  \begin{itemize}
+  \item\textbf{Listas}
+    \inputminted[bgcolor=bg]{haskell}{code/List.hs}
+  \item\textbf{Árboles Binarios}
+    \inputminted[bgcolor=bg]{haskell}{code/BinaryTree.hs}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Estructuras de datos} \framesubtitle{Representación
+    gráfica} Así es como representamos gráficamente la lista [1,2,3] en Haskell:
+  
+  \begin{center}                %Esto no habría sido posible sin Pablo Conde de la Mata
+    \begin{tikzpicture} [node distance=1.5cm, every node/.style={font=\sffamily}, align=center]
+      \node (raiz)   {$(:)$};
+      \node (hijo1) [below of=raiz, xshift=-1cm] {$1$};
+      \node (hijo2) [below of=raiz, xshift=1cm] {$(:)$};
+
+      \node (hijo3) [below of=hijo2, xshift=-1cm] {$2$};
+      \node (hijo4) [below of=hijo2, xshift=1cm] {$(:)$};
+
+      \node (hijo5) [below of=hijo4, xshift=-1cm] {$3$};
+      \node (hijo6) [below of=hijo4, xshift=1cm] {$[]$};
+
+
+      \draw[->] (raiz) -- (hijo1);
+      \draw[->] (raiz) -- (hijo2);
+      \draw[->] (hijo2) -- (hijo3);
+      \draw[->] (hijo2) -- (hijo4);
+      \draw[->] (hijo4) -- (hijo5);
+      \draw[->] (hijo4) -- (hijo6);
+    \end{tikzpicture}
+  \end{center}
+  % \input{sec/diagrama_lista}
+\end{frame}
+
+\section{Funciones de Orden Superior}
+\subsection{map}
+\begin{frame}
+  \frametitle{Funciones de orden Superior}
+  \framesubtitle{\textit{map}}
+\end{frame}
+\subsection{filter}
+\begin{frame}
+  \frametitle{Funciones de orden Superior}
+  \framesubtitle{\textit{filter}}
+\end{frame}
+\subsection{fold}
+\begin{frame}
+  \frametitle{Funciones de orden Superior}
+  \framesubtitle{\textit{foldr}}
+\end{frame}

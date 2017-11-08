@@ -1,4 +1,4 @@
-Prelude> 2 + 2
+Prelude> id 1
+1
+Prelude> length "hola"
 4
-Prelude> True && False
-False
