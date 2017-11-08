@@ -1,4 +1,5 @@
 module Lib (
+  incrementar, mul, duplicar,
   head, tail, init, last, append,
   reverse, concat, square, squares,
   stringize, even, big, evens, bigs,
@@ -15,7 +16,7 @@ type String = [Char]
   Implementa y define el tipo de la función "incrementar"
 -}
 
-incrementar x = undefined
+incrementar x = x + 1
 
 {-
   Implementa la función "mul" y define el tipo de la función.
