@@ -16,7 +16,6 @@ prop_f_list_elem f g xs x = (f xs x) == (g xs x)
 
 type List_to_e_n = ([Int] -> Int) -> ([Int] -> Int) -> NonEmptyList Int -> Bool
 type List_to_list_i_n = ([Int] -> [Int]) -> ([Int] -> [Int]) -> NonEmptyList Int -> Bool
-
 type List_to_e = ([Int] -> Int) -> ([Int] -> Int) -> [Int] -> Bool
 type List_to_list_i = ([Int] -> [Int]) -> ([Int] -> [Int]) -> [Int] -> Bool
 type List_to_list_s = ([Int] -> [String]) -> ([Int] -> [String]) -> [Int] -> Bool
@@ -59,4 +58,4 @@ main = hspec $ do
     it "pruebas de sum..." $ do
       property $ (prop_f_list :: List_to_e) Prelude.sum Lib.sum
     it "pruebas de maximum..." $ do
-      property $ (prop_f_list :: List_to_e) Prelude.maximum Lib.maximum
+      property $ (prop_f_list_n :: List_to_e_n) Prelude.maximum Lib.maximum

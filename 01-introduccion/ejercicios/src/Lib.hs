@@ -2,7 +2,7 @@
 
 module Lib where
 
-import Prelude hiding (head, tail, init, last, sum, length, maximum, even, concat)
+import Prelude hiding (head, tail, init, last, sum, length, maximum, even, concat, reverse)
 
 {-
   Implementa y define el tipo de la función "incrementar"
