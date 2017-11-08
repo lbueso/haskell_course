@@ -2,9 +2,8 @@
 
 module Main where
 
+import Prelude (IO, undefined)
 import Lib
 
-import Prelude (IO, putStrLn)
-
 main :: IO ()
-main = putStrLn "Hello world!"
+main = undefined

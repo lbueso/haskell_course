@@ -1,16 +1,8 @@
-module Lib (
-  incrementar, mul, duplicar,
-  head, tail, init, last, append,
-  reverse, concat, square, squares,
-  stringize, even, big, evens, bigs,
-  length, sum, maximum, coadn
-  ) where
+{-# LANGUAGE NoImplicitPrelude #-}
 
-import Prelude (Num, Show, Char, Integral,
-                Bool, Ord, Int, undefined,
-                (+), (*), (^))
+module Lib where
 
-type String = [Char]
+import Prelude hiding (head, tail, init, last, sum, length, maximum, even, concat)
 
 {-
   Implementa y define el tipo de la función "incrementar"
@@ -89,6 +81,7 @@ Conseto: usa myAppen
 concat :: [a] -> [a] -> [a]
 concat = undefined
 
+-- MAP
 {-
 Implementa una función que dado un número cualquiera, calcule su cuadrado.
 -}
