@@ -1,9 +1,8 @@
-{-# LANGUAGE NoImplicitPrelude #-}
-
 module Main where
 
-import Prelude (IO, undefined)
+import Prelude hiding (map, filter, foldr)
+
 import Lib
 
 main :: IO ()
-main = undefined
+main = putStrLn "Hello world!"
